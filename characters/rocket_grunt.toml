@@ -1,0 +1,24 @@
+# ロケットだんの したっぱ（名札は ロケットだん『 。勝負の まえの 台詞は 名札なしでも 見た目から 出る）
+# 出典: Route9_Frlg、Route2_Frlg、VermilionCity_WeatherInstitute_2F_Frlg、MiyabiCity_BurnedTower_1F、
+#       LibertyGarden_Lighthouse_B1F_Frlg、メモ villain-calls-player-kid
+
+id = "rocket_grunt"
+name = "ロケットだん（したっぱ）"
+role = "やられ役。かんぶの 命令で うごく"
+screen_time = "minor"
+
+[voice]
+first_person = "おれ（男）／ あたし・わたし（女）"
+call_player = "こども・ガキ・おまえ（わざと。直さない）"
+call_others = "かんぶは「アテナさま」「かんぶの みなさん」、ボスは「サカキさま」「ボス」"
+endings = ["（男）〜だ！ 〜ぜ 〜やがって 〜しな", "（女）〜わ 〜なさい 〜でしょ"]
+catchphrases = ["なんだ おまえ？", "くそっ……", "おぼえてろよ！", "しっ しっ！", "はっ！（命令への 返事）"]
+length = "1ページ 1〜2行。勝負の まえ 2行・負け 1行・あと 2行"
+emotion = "いばるが すぐ くずれる。かんぶの まえでは びくびく"
+
+[dont]
+list = ["主人公を「こども」「ガキ」と 呼ぶのを 直さない（わざと）", "組織の 計画を 正確に 語る（聞きかじり 程度で ぼかす）"]
+
+[check]
+tags = ["ロケットだん"]
+ng_words = ["ございます", "ぼく"]

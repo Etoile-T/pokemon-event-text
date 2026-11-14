@@ -1,0 +1,29 @@
+# アポロ（ロケットだん かんぶ。3人の まとめ役）
+# 出典: MiyabiCity_BurnedTower_B1F（Archer1〜4・ArcherDefeat）
+
+id = "apollo"
+name = "アポロ"
+role = "ロケットだん かんぶ。ランスと アテナに 指示を 出す"
+screen_time = "support"
+flaw = "負けても 計画どおりと 言いはり、時間かせぎに 頼る"
+
+[voice]
+first_person = "（台本に まだ 出ない。仲間を ふくめて われわれ）"
+call_player = "こども（見下す。わざと。メモ villain-calls-player-kid）"
+call_others = "ランス・アテナは 呼びすてで 命令（「ランス アテナ はじめろ」）、シルバーも 呼びすて"
+endings = ["〜か", "〜ろ", "〜もらおう", "〜できる"]
+catchphrases = ["…やるな", "まあ いい", "だが じかんは かせげた"]
+length = "1ページ 1〜2行。言葉は 少ない"
+emotion = "おちついて 冷たい。負けても 声を あげない"
+
+[[relations]]
+target = "主人公"
+kind = "敵"
+no_compromise = "三犬を 手に 入れる 計画を ゆずらない"
+
+[dont]
+list = ["声を はりあげる", "やられ役の 捨てぜりふ（おぼえてろよ 等。それは したっぱ）", "計画を ぜんぶ しゃべる"]
+
+[check]
+tags = ["アポロ"]
+ng_words = ["おれ", "ぼく", "だぜ", "おぼえてろ"]

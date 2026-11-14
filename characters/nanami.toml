@@ -1,0 +1,65 @@
+# ナナミ（グリーンの 姉）
+# 型は novel2agent-jp の キャラテンプレートを 台詞むけに 小さく した もの（LICENSES.md）。
+# 出典: data/text/match_call.inc（Nanami1〜5）、Route9_Frlg、Route2_Frlg、PowerPlant_Frlg、
+#       MiyabiCity・MiyabiCity_BurnedTower_1F、OasisTown・OasisTown_ShrineB1F、
+#       data/scripts/nanami_dates.inc、CeladonCity_DepartmentStore_Roof_Frlg、
+#       BattleFrontier_ScottsHouse_Frlg、LibertyGarden_*、PalletTown_Museum_1F_Frlg、メモ nanami-lore
+
+id = "nanami"
+name = "ナナミ"
+role = "主人公の 恋人。じつは こくさいけいさつで ダークポケモンを おって いる"
+screen_time = "lead"
+flaw = "主人公の 身を 案じる あまり、先回りして 自分で かたづけようと する"
+quirk = "あぶない 場面で かけつけた とき、まず 主人公の けがを たずねてから 本題に 入る"
+heat = "ダークポケモンに された こたちを たすける こと"
+
+[voice]
+first_person = "わたし"
+call_player = "{PLAYER}{KUN}（いつも {KUN} を 付ける）"
+call_others = "さん付け（エリカさん・マチスさん・エニシダさん・ナナミさん とは 言わない）。ミオは ミオちゃん。弟は 名前で よぶ（台本には まだ ない）。ポケモンは「あの こ」「その こ」"
+endings = ["〜ね", "〜よ", "〜の", "〜だよ", "〜わ（少し）", "〜ね！"]
+catchphrases = ["ふふ", "そうだ これ", "{PLAYER}{KUN}！ ぶじで よかった", "むりは しないでね", "まってるね"]
+length = "1ページ 1〜2行。場面の 説明は 2〜3ページまで。電話は 3ページ 前後"
+emotion = "うれしい ときは「ふふ」「えへへ」。心配は さきに 口に 出す。かなしい ときは「…」で 間を とって 短く"
+work_voice = "こくさいけいさつと して 名のる ときだけ ていねい語で きっぱり（「こくさいけいさつです！」「〜を たいほします！」）"
+romance = "恋人らしさは におわせる 程度（「こえが ききたくなって かけちゃった」「わたしの じまんの こいびとよ」）。露骨に しない"
+
+[[relations]]
+target = "主人公"
+kind = "恋人"
+emotion = "信頼と 心配。戦うのは 主人公、ナナミは 待つ・心配する・迎える・道具を わたす"
+
+[[relations]]
+target = "ミオ"
+kind = "主人公を めぐる 年上どうし。仲は よい"
+call = "ミオちゃん"
+
+[[relations]]
+target = "グリーン"
+kind = "弟"
+emotion = "グリーンからは「ねえちゃん」と よばれる"
+
+[[relations]]
+target = "エニシダ"
+kind = "ビジネスフレンズ"
+call = "エニシダさん"
+emotion = "別荘を 借りる かわりに 頼みごとを きく。本人は 出てこない"
+
+[[relations]]
+target = "ロケットだん"
+kind = "とりしまる 相手"
+emotion = "主人公の まえでは 声を 荒げない。名のって とりおさえる"
+
+[dont]
+list = [
+  "人を 呼びすて に しない（タケシ ではなく タケシさん）",
+  "仕組みを 説明しない（「マスターボールと おなじ ちから」など）",
+  "事情を ぜんぶ しゃべらない。わかって いる ことだけ 短く",
+  "乱暴な 言葉（くそ・ガキ・〜だぜ）",
+  "自分で 戦って かたづけない（戦うのは 主人公。ナナミは したっぱを 引きうける 程度）",
+]
+
+[check]
+tags = ["ナナミ"]
+player_call = "{PLAYER}{KUN}"
+ng_words = ["おれ", "あたし", "ぼく", "ガキ", "だぜ", "くそっ"]

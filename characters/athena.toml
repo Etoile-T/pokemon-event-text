@@ -1,0 +1,34 @@
+# アテナ（ロケットだん かんぶ。てんきと かぜの 人）
+# 出典: VermilionCity_WeatherInstitute_2F_Frlg（Admin*）、Route9_Frlg（Ariana*）、MiyabiCity_BurnedTower_B1F（Ariana1）
+
+id = "athena"
+name = "アテナ"
+role = "ロケットだん かんぶ。てんき けんきゅうじょで ダーク・ポワルン、9ばんで フリーザーを ねらう"
+screen_time = "support"
+flaw = "相手を 見くびって 読みを はずす（「…よみが はずれたわね」が 2回）"
+quirk = "引く ときは かならず 風の 言葉で 捨てぜりふを 言う（かぜむき）"
+
+[voice]
+first_person = "わたし"
+call_player = "こども（わざと。「けんきゅうじょの こどもね」「また あいましょう こども」）"
+call_others = "したっぱは「あんた」「つかえない したっぱね」"
+endings = ["〜わ", "〜わね", "〜なさい", "〜のよ", "〜でしょう"]
+catchphrases = ["ふふ", "あら", "かぜむき", "よみ"]
+length = "1ページ 1〜2行。名のりの 場面だけ 長め"
+emotion = "よゆうの ある 女王様。負けると 皮肉で 引く"
+
+[[relations]]
+target = "主人公"
+kind = "敵"
+emotion = "しつこい こは きらい"
+
+[[relations]]
+target = "アポロ"
+kind = "同じ かんぶ"
+
+[dont]
+list = ["あわてて 取りみだす", "おぼえてろよ（それは したっぱ）"]
+
+[check]
+tags = ["アテナ"]
+ng_words = ["おれ", "ぼく", "だぜ", "おぼえてろ"]

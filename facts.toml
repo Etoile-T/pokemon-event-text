@@ -1,0 +1,156 @@
+# 物語で 決まって いる こと（novel2agent-jp の [[established]] に あたる）
+# 台詞を 書く まえに 読み、これと くいちがう ことを 言わせない。
+# status: confirmed = 台本・メモで 決まった / proposed = 書き手の 推しはかり（ユーザーに たしかめる）
+# 新しい イベントで 決まった ことは ここに proposed で 足し、ユーザーが みとめたら confirmed に する。
+
+# ---------- 主人公と 恋人 ----------
+[[established]]
+content = "主人公は 18さい いじょう。ゲームの 中で 年は 言わない"
+source = "メモ protagonist-adult"
+status = "confirmed"
+
+[[established]]
+content = "ミオは 主人公の 家に いる 年上の 女性。血縁では ない 同棲相手で 恋人。古い 呼び名（おねえちゃん・ミサキ）は 使わない"
+source = "メモ protagonist-adult"
+status = "confirmed"
+
+[[established]]
+content = "ナナミ（グリーンの 姉）も 主人公の 恋人。ミオも ナナミも 大人の 恋愛関係だが、台詞は におわせる 程度"
+source = "メモ protagonist-adult / nanami-lore"
+status = "confirmed"
+
+[[established]]
+content = "ナナミは じつは こくさいけいさつ で、ダークポケモンを おって いる。名のる ときは「こくさいけいさつです！」"
+source = "メモ nanami-lore、Route9_Frlg、PowerPlant_Frlg"
+status = "confirmed"
+
+[[established]]
+content = "ナナミの 拠点は バトルフロンティアの べっそう（もとの エニシダの 家、BattleFrontier_ScottsHouse_Frlg）。ちかしつに ろうや が あり、たおした ダークポケモンが おくられる"
+source = "メモ nanami-lore / pending-decisions、BattleFrontier_ScottsHouse_Frlg"
+status = "confirmed"
+
+[[established]]
+content = "ナナミと エニシダは ビジネスフレンズ。フロンティアの 道具（BP・シールドなど）は エニシダに たのまれて ナナミが わたす。エニシダ本人は 出てこない"
+source = "メモ nanami-lore"
+status = "confirmed"
+
+[[established]]
+content = "ナナミは バッジの たびに デートに さそう（ポケモンセンターの まえで まつ → 勝負）。勝負では 主人公と ライバルが 使わなかった ポケモンを 使う"
+source = "data/scripts/nanami_dates.inc、メモ pending-decisions"
+status = "confirmed"
+
+# ---------- ロケットだん ----------
+[[established]]
+content = "ロケットだんの かんぶは アポロ・ランス・アテナの 3人（やけたとうで そろって 出る）。アポロが まとめ役"
+source = "MiyabiCity_BurnedTower_B1F"
+status = "confirmed"
+
+[[established]]
+content = "前の 版の かんぶ ユキメ（ふたごじま）・カゲロウ（ルギアの どうくつ）は いない。フリーザーは 9ばんで アテナ、ルギアは めざめのほこらで ランスに おきかわった"
+source = "Route9_Frlg、OasisTown_ShrineB1F、トレーナー表に ユキメ・カゲロウが ない"
+status = "confirmed"
+
+[[established]]
+content = "ボスは サカキ。したっぱ・けんきゅういんは「サカキさま」と よぶ。サカキの 手持ちの さいごは ダークの 三犬（アジト ライコウ・シルフ エンテイ・トキワジム スイクン）"
+source = "PowerPlant_Frlg（ScientistGivesUp）、メモ pending-decisions"
+status = "confirmed"
+
+[[established]]
+content = "やけたとうの ちかの 三犬（エンテイ・スイクン・ライコウ）は ロケットだんに つれさられた。ナナミは「3びきは かならず とりかえそう」と 言った"
+source = "MiyabiCity_BurnedTower_1F / B1F"
+status = "confirmed"
+
+[[established]]
+content = "シルバーは やけたとうで ロケットだんの 側に 立った（「ロケットだんの しごとの じゃまだ」）。サカキとの 関係は 台本に まだ 出て いない"
+source = "MiyabiCity_BurnedTower_1F"
+status = "confirmed"
+
+[[established]]
+content = "はつでんしょの けんきゅういん（トレーナー名 ライデン）が サンダーを ダークに した。スナッチの あと ナナミが たいほ"
+source = "PowerPlant_Frlg"
+status = "confirmed"
+
+[[established]]
+content = "アテナは クチバの てんき けんきゅうじょで ダーク・ポワルンを 使い、9ばんで くろい オーラの フリーザーを ねらった"
+source = "VermilionCity_WeatherInstitute_2F_Frlg、Route9_Frlg"
+status = "confirmed"
+
+# ---------- ダークポケモン ----------
+[[established]]
+content = "ダークポケモンは こころを とざされた ポケモン。くろい オーラ（むらさきの ほのお）を まとう"
+source = "PalletTown_RivalsHouse_Frlg、Route9_Frlg、OasisTown_ShrineB1F"
+status = "confirmed"
+
+[[established]]
+content = "トレーナーの ダークポケモンは スナッチボールで うばう（スナッチ）。ふつうの ボールでは とれない"
+source = "PalletTown_RivalsHouse_Frlg（HowToSnag）"
+status = "confirmed"
+
+[[established]]
+content = "こころを ひらく ことを 画面では「リライブ」と よぶ（わざの「じょうか」は 別）。いっしょに たたかったり あるいたり すると こころの とびらが ひらく"
+source = "メモ pending-decisions、data/text/match_call.inc（Nanami2）"
+status = "confirmed"
+
+[[established]]
+content = "スナッチ しそこねた ダークポケモンは 再戦に しない。たおすと ナナミの べっそうの ちかしつに おくられる"
+source = "メモ pending-decisions（ユーザーの 方針）"
+status = "confirmed"
+
+[[established]]
+content = "ダーク・ルギアは ネレアシティ（地図名 OasisTown）の めざめのほこら の おくに いる。ナナミが わたす 1こ だけの ボールは「なげれば ぜったい はずれない」"
+source = "OasisTown、OasisTown_ShrineB1F"
+status = "confirmed"
+
+# ---------- ビクティニ ----------
+[[established]]
+content = "ビクティニは イッシュの リバティガーデン（灯台の ちか）に いた。マサラの みなとから ふねで 行く"
+source = "LibertyGarden_*、メモ pending-decisions"
+status = "confirmed"
+
+[[established]]
+content = "ビクティニが なくと、くろい オーラが とびちって きえる（9ばんの フリーザー）。オーラの きえた フリーザーは ダークポケモンでは なく なる。台詞で 仕組みは 説明しない"
+source = "Route9_Frlg"
+status = "confirmed"
+
+# ---------- 場所 ----------
+[[established]]
+content = "カエデシティ（地図名 MiyabiCity）は ジョウトの エンジュと しまいとし。やけたとう・ナゾノクサの とう・ゴーストどうじょう（しはん マツバ）・ぶようじょう が ある。25ばんどうろの ゲートから 入る"
+source = "MiyabiCity*"
+status = "confirmed"
+
+[[established]]
+content = "ネレアシティは うみの そこの まち。マサラの びじゅつかんの えに かかれて いる。マサラの みなとの せんすいかんの のりば から 行く"
+source = "PalletTown_Museum_1F_Frlg、OasisTown_Harbor、メモ pending-decisions"
+status = "confirmed"
+
+[[established]]
+content = "マサラの ショップは びじゅつかんの 建物に なった。マサラには みなとが ある"
+source = "メモ pending-decisions"
+status = "confirmed"
+
+# ---------- 道具・ポケナビ ----------
+[[established]]
+content = "ポケナビの「エントリーコール」に ナナミと ミオが 入って いる。家の 中では 電話できない"
+source = "メモ pending-decisions、ViridianForest_Frlg"
+status = "confirmed"
+
+[[established]]
+content = "ポケナビには「そらとぶタクシー」（ニビジムの あと ナナミの 電話で）と「どこでもボックス」が ある"
+source = "メモ pending-decisions"
+status = "confirmed"
+
+[[established]]
+content = "メガリング・Zリング・ダイマックスバンド・テラスタルオーブは 旅立ちの とき ママから もらう"
+source = "メモ pending-decisions"
+status = "confirmed"
+
+# ---------- 呼び方（まとめ） ----------
+[[established]]
+content = "悪役（ロケットだん・かんぶ）が 主人公を こども・ガキ と よぶのは わざと。直さない"
+source = "メモ villain-calls-player-kid"
+status = "confirmed"
+
+[[established]]
+content = "ナナミは 人を さん付けで よぶ。主人公は {PLAYER}{KUN}、ミオは ミオちゃん"
+source = "メモ nanami-lore"
+status = "confirmed"

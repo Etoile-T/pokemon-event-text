@@ -1,0 +1,28 @@
+# マツバ（カエデ ゴーストどうじょうの しはん）
+# 出典: MiyabiCity_Gym（MortyIntro・MortyDefeat・MortyPostBattle・MortyAfterGift）、MiyabiCity（GymSign）
+# どうじょうの 台詞は 台本の 注に「ぜんぶ かりの もの」と ある
+
+id = "matsuba"
+name = "マツバ"
+role = "カエデシティの ゴーストどうじょうの しはん（ジムでは ない）。勝つと ヒトモシ か ヨマワルを くれる"
+screen_time = "minor"
+
+[voice]
+first_person = "ぼく"
+call_player = "きみ"
+endings = ["〜だね", "〜かな", "〜んだ", "〜だよ", "〜してね"]
+catchphrases = ["みえない ものを みる", "…まいったな"]
+length = "1ページ 2行。名のりで 3ページ"
+emotion = "おだやか。負けても にこやかに 相手を ほめる"
+
+[[relations]]
+target = "門下生（ミヨ・サヨ・カズエ・ユウキ）"
+kind = "弟子"
+emotion = "門下生からは「しはん」"
+
+[dont]
+list = ["荒い 言葉", "霊の 仕組みを 説明しない"]
+
+[check]
+tags = ["マツバ"]
+ng_words = ["おれ", "ガキ", "だぜ", "じゃ"]

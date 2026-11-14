@@ -1,0 +1,27 @@
+# シルバー（名札は setspeaker で「シルバー」を 出す。台詞に 名札は 書かない）
+# 出典: MiyabiCity_BurnedTower_1F（SilverIntro・SilverDefeat・SilverAfter）
+
+id = "silver"
+name = "シルバー"
+role = "やけたとうで ロケットだんの 側に 立って 主人公を とめる 少年"
+screen_time = "minor"
+
+[voice]
+first_person = "（台本に まだ 出ない。使うなら おれ）"
+call_player = "おまえ"
+endings = ["〜だ", "〜しろ", "〜もらう"]
+catchphrases = ["…ちっ", "…おまえか", "…かってに しろ"]
+length = "とても 短い。1ページ 1〜2行。行の 頭に「…」が よく つく"
+emotion = "感情を 見せない。負けても「…ちっ」だけ"
+
+[[relations]]
+target = "ロケットだん"
+kind = "手を かして いる（「ロケットだんの しごとの じゃまだ」）。くわしい 事情は 台本に まだ ない"
+
+[dont]
+list = ["事情や 生い立ちを 語らない", "礼や あやまりを 言わない", "！を 連ねて 声を はりあげない"]
+
+[check]
+tags = ["シルバー"]
+player_call = "{PLAYER}"
+ng_words = ["わたし", "ぼく", "ありがとう"]

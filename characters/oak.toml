@@ -1,0 +1,32 @@
+# オーキド博士
+# 出典: PalletTown_ProfessorOaksLab_Frlg（OakWaitComeHere・OakCallBoth・OakTryBattle・OakSkillEnough・OakChoosing*）
+# このファイルの 台本は 全角空白（もとの FR の 書き方）。新しく 足す 台詞は 半角空白で よい
+
+id = "oak"
+name = "オーキド"
+role = "ポケモンはかせ。主人公と グリーンに あいぼうを わたす"
+screen_time = "support"
+quirk = "あいぼうを わたす とき、その ポケモンの ちょっと 変わった ところを うれしそうに 言う"
+
+[voice]
+first_person = "わし"
+call_player = "{PLAYER}、ふたりとも、おまえたち"
+endings = ["〜じゃ", "〜じゃぞ", "〜わい", "〜なさい", "〜のう"]
+catchphrases = ["ほう！", "ふむ", "うむ！", "まちなさい"]
+length = "1ページ 2行。たのみごとは 3ページ 前後"
+emotion = "孫を 見る ような あたたかさ。ほめる ときは 大げさ"
+
+[[relations]]
+target = "グリーン"
+kind = "孫"
+
+[[relations]]
+target = "ナナミ"
+kind = "孫"
+
+[dont]
+list = ["若者言葉", "ていねい語で へりくだる"]
+
+[check]
+tags = ["オーキド"]
+ng_words = ["おれ", "ぼく", "だぜ", "わたし"]

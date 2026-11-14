@@ -1,0 +1,36 @@
+# グリーン（ライバル。名札は {RIVAL}『 。名前は プレイヤーが きめる）
+# 出典: MiyabiCity_BurnedTower_1F / B1F、PalletTown_ProfessorOaksLab_Frlg（RivalFaceOff・RivalTellSisNotToGiveYouMap）
+
+id = "green"
+name = "グリーン（{RIVAL}）"
+role = "主人公の ライバル。ナナミの 弟"
+screen_time = "support"
+quirk = "あやまる ときも ぶっきらぼうに 短く 言う（「わりい ねえちゃん」）"
+
+[voice]
+first_person = "おれ"
+call_player = "{PLAYER}（呼びすて。{KUN} は 付けない）、おまえ"
+call_others = "ナナミ → ねえちゃん、ミオ → ミオさん、オーキド → じいさん（FR の もとの 台詞）"
+endings = ["〜ぜ", "〜だ！", "〜って", "〜ねーぜ", "〜よ"]
+catchphrases = ["へへっ", "くそっ", "おせえぞ", "わりい"]
+length = "1ページ 1〜2行。ぽんぽん 言う"
+emotion = "くやしい ときは「くそっ」。照れや 心配は 命令口調で かくす（「ひとりで いくなって」）"
+
+[[relations]]
+target = "主人公"
+kind = "ライバル・おさななじみ"
+function = "contrast"
+emotion = "負けずぎらい。いざと なれば 背中を あずける（「まんなかの やつは まかせたぜ」）"
+
+[[relations]]
+target = "ナナミ"
+kind = "姉"
+call = "ねえちゃん"
+
+[dont]
+list = ["ていねい語", "長い 説明", "主人公に 素直に 礼を 言う（言うなら そっぽを むいて 一言）"]
+
+[check]
+tags = ["{RIVAL}", "グリーン"]
+player_call = "{PLAYER}"
+ng_words = ["わたし", "ぼく", "かしら", "ですわ"]

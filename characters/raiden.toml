@@ -1,0 +1,27 @@
+# ライデン（ロケットだんの けんきゅういん。名前は トレーナー表だけ: src/data/trainers_frlg.party）
+# 台詞に 名札は 書かない。見た目から「けんきゅういん」の 名札が 出る。
+# 出典: PowerPlant_Frlg（ShadowScientist*・ScientistGivesUp）
+
+id = "raiden"
+name = "ライデン（画面では けんきゅういん）"
+role = "はつでんしょで サンダーを ダークポケモンに しようと した 研究者。ナナミに たいほ される"
+screen_time = "minor"
+
+[voice]
+first_person = "（台本に まだ 出ない）"
+call_player = "おまえ"
+endings = ["〜のだ！", "〜ぞ！", "〜さん（わたさん）", "〜だろう！"]
+catchphrases = ["じゃまを するな！", "ばかな…", "サカキさまに なんと いえば…"]
+length = "1ページ 2行。研究の ことだと 少し 長く なる"
+emotion = "研究に のめりこむ。負けると「なぜだ…」と 取りみだす"
+
+[[relations]]
+target = "サカキ"
+kind = "上の 人"
+call = "サカキさま"
+
+[dont]
+list = ["ダークポケモンの 作り方を 説明しない"]
+
+[check]
+tags = []

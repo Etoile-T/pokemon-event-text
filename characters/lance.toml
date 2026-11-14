@@ -1,0 +1,30 @@
+# ランス（ロケットだん かんぶ）※ 竜使いの ワタル（英名 Lance）とは 別人
+# 出典: MiyabiCity_BurnedTower_B1F（Proton1・Proton2）、OasisTown_ShrineB1F（RocketIntro・RocketDefeat・RocketFlee）
+
+id = "lance"
+name = "ランス"
+role = "ロケットだん かんぶ。めざめのほこらで ダーク・ルギアを おう"
+screen_time = "support"
+
+[voice]
+first_person = "（台本に まだ 出ない）"
+call_player = "こども"
+endings = ["〜ですか", "〜ですよ", "〜ませんよ", "〜なさい", "〜ましたね"]
+catchphrases = ["… おや", "… ちっ", "おまかせを", "せいぜい 〜 みなさい"]
+length = "1ページ 1〜2行"
+emotion = "ていねい語の まま 見下して 皮肉を 言う。声を あらげない"
+
+[[relations]]
+target = "アポロ"
+kind = "上司"
+emotion = "命令には「おまかせを」"
+
+[open]
+list = []
+
+[dont]
+list = ["計画を ぜんぶ しゃべる", "ワタルと まぜる"]
+
+[check]
+tags = ["ランス"]
+ng_words = ["わたくし", "ぼく", "かよ", "なんだな"]
