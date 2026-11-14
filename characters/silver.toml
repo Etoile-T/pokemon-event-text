@@ -1,12 +1,21 @@
 # シルバー（名札は setspeaker で「シルバー」を 出す。台詞に 名札は 書かない）
-# 出典: MiyabiCity_BurnedTower_1F（SilverIntro・SilverDefeat・SilverAfter）
+# HGSS の 人で、FR には 出ない。手本は FR の グリーン（同じ ライバルの 少年。らんぼうな 語尾）を
+#   もっと 短く、感情を けずった もの。find_official.py --speaker グリーン
+# 改造の 台本: MiyabiCity_BurnedTower_1F（SilverIntro・SilverDefeat・SilverAfter）
 
 id = "silver"
 name = "シルバー"
 role = "やけたとうで ロケットだんの 側に 立って 主人公を とめる 少年"
 screen_time = "minor"
 
-[voice]
+[official]
+model = "FR の グリーン"
+first_person = "おれ"
+call_player = "おまえ"
+endings = ["〜だ", "〜ぜ（シルバーは あまり 使わない）", "〜かよ"]
+note = "グリーンの にぎやかさ（へへーん・！の 連発）は まねしない。語尾の らんぼうさだけ かりる"
+
+[project]
 first_person = "（台本に まだ 出ない。使うなら おれ）"
 call_player = "おまえ"
 endings = ["〜だ", "〜しろ", "〜もらう"]

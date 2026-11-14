@@ -1,3 +1,8 @@
 __pycache__/
 *.pyc
 .DS_Store
+# 公式（日本語版 FR）の 台詞の 控えは 公開しない。既定は ~/.cache/pokemon-event-text/ に 置くが、
+# まちがって ここに 書き出しても 入らない ように する
+*.jsonl
+official_*
+.cache/

@@ -1,23 +1,35 @@
 # ロケットだんの したっぱ（名札は ロケットだん『 。勝負の まえの 台詞は 名札なしでも 見た目から 出る）
-# 出典: Route9_Frlg、Route2_Frlg、VermilionCity_WeatherInstitute_2F_Frlg、MiyabiCity_BurnedTower_1F、
-#       LibertyGarden_Lighthouse_B1F_Frlg、メモ villain-calls-player-kid
+# [official] は 日本語版 FR の したっぱの 台詞 151件（find_official.py --speaker したっぱ）。
+#   ほとんどが 勝負の まえ・負け・勝負の あと（それぞれ 約 50件）。5のしまの そうこには 女の したっぱも いる。
+# 改造の 台本: Route9_Frlg、Route2_Frlg、VermilionCity_WeatherInstitute_2F_Frlg、MiyabiCity_BurnedTower_1F、
+#   LibertyGarden_Lighthouse_B1F_Frlg、メモ villain-calls-player-kid
 
 id = "rocket_grunt"
 name = "ロケットだん（したっぱ）"
 role = "やられ役。かんぶの 命令で うごく"
 screen_time = "minor"
 
-[voice]
-first_person = "おれ（男）／ あたし・わたし（女）"
-call_player = "こども・ガキ・おまえ（わざと。直さない）"
+[official]
+source = "日本語版 FR 151件"
+first_person = "おれ（7）、おれたち（5）。女は わたし"
+call_player = "おまえ（13）、こども（7）、ガキ（2）"
+call_others = "ボスは「ボス」（14）、サカキさま（1）"
+endings = ["〜ぜ（いぜ・だぜ・るぜ）", "〜のだ", "〜たぞ", "〜だな", "〜なよ・〜しな（きを つけな）", "（女）〜の・〜わ"]
+catchphrases = ["ち ちくしょう！（どもりは 字の あとに 空白）", "くそ！・くそー", "くッ やられた！", "おぼえて やがれ！", "まあ いい", "ばったり…", "がはは！", "くっくっく…"]
+length = "1件 1ページ（平均 1.1）、1ページ 1.9行、1行 平均 10.8字。負けは 1行が 多い"
+emotion = "いばるが すぐ くずれる。負けても「まあ いい」と なかまを たよって 強がる"
+
+[project]
 call_others = "かんぶは「アテナさま」「かんぶの みなさん」、ボスは「サカキさま」「ボス」"
-endings = ["（男）〜だ！ 〜ぜ 〜やがって 〜しな", "（女）〜わ 〜なさい 〜でしょ"]
-catchphrases = ["なんだ おまえ？", "くそっ……", "おぼえてろよ！", "しっ しっ！", "はっ！（命令への 返事）"]
-length = "1ページ 1〜2行。勝負の まえ 2行・負け 1行・あと 2行"
-emotion = "いばるが すぐ くずれる。かんぶの まえでは びくびく"
+catchphrases = ["なんだ おまえ？", "しっ しっ！", "はっ！（命令への 返事）"]
+
+[conflicts]
+list = [
+  "くそっ: 公式は「くそ！」「くそー」「ちくしょう」。「くそっ」は 0回",
+]
 
 [dont]
-list = ["主人公を「こども」「ガキ」と 呼ぶのを 直さない（わざと）", "組織の 計画を 正確に 語る（聞きかじり 程度で ぼかす）"]
+list = ["主人公を「こども」「ガキ」と 呼ぶのを 直さない（わざと。公式も 使う）", "組織の 計画を 正確に 語る（聞きかじり 程度で ぼかす）"]
 
 [check]
 tags = ["ロケットだん"]

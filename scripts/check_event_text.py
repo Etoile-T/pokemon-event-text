@@ -5,7 +5,7 @@ tools/check_jp_text.py は リポジトリ全体の「.string の 引用符・�
 日本語の 字が charmap に あるか」を 見る。こちらは それと 重ならない、
 台詞の 中身と 形を ラベルごとに 見る:
 
-  LEN    1行の 長さ（ふつうの 窓 27字・電話 24字を こえたら エラー、目安を こえたら 注意）
+  LEN    1行の 長さ（ふつうの 窓 27字・電話 24字を こえたら エラー、公式の 目安 18字を こえたら 注意）
   LINES  1ページに \\n が 2つ 以上（窓は 2行。3行目は \\l で 送る）
   CHAR   charmap に ない 字（check_jp_text が 見ない ♪ ～ （ ） → なども）、漢字（かなで 書く）
   TAG    名札「名前『」の 形（ページの 頭だけ・8字まで・空白なし・「 で 書いて いない）
@@ -13,7 +13,9 @@ tools/check_jp_text.py は リポジトリ全体の「.string の 引用符・�
   CRY    ポケモンの 鳴き声を 「」で 囲んで いる
   WORD   禁止語・言いすぎの 言葉（banned_words.toml）
   CHARA  人物の 表（characters/*.toml）の [check] に 合わない 呼び方・言葉
-  STYLE  {KUN} の 使い方、全角と 半角の 空白の まぜ書き
+  STYLE  {KUN} の 使い方、全角と 半角の 空白の まぜ書き、台詞の「、」「。」、「てに いれた」の 書き方
+
+目安の 数字は 元の 日本語版 FR の 台詞を 数えた もの（references/format.md、scripts/find_official.py --style）。
 
 使い方:
   python3 check_event_text.py data/maps/Route9_Frlg/scripts.inc
@@ -34,9 +36,10 @@ from pathlib import Path
 SKILL_DIR = Path(__file__).resolve().parents[1]
 
 FIELD_MAX = 27          # ふつうの 窓: 幅 27 タイル × 8px、字は どれも 8px（src/menu.c, src/text.c）
-FIELD_SOFT = 21         # いまの 台本の 行は ほぼ 21字 まで
+FIELD_SOFT = 18         # 公式（日本語版 FR）の 台詞の 行の 99.3% が 18字まで（17字まで 97.9%）
 PHONE_MAX = 24          # 電話の 窓: 幅 28 タイル、絵の 分 32px あけて 書く（src/match_call.c）
-PHONE_SOFT = 20
+PHONE_SOFT = 18         # 公式に 電話は ない。ふつうの 窓と 同じ 目安
+SYSTEM_TEXT_RE = re.compile(r"^\{PLAYER\}(は|の)|(もらった|うけとった|てに\s*いれた|なかまに\s*なった)[！!]")
 SPEAKER_NAME_MAX = 8    # src/field_speaker_prefix.c の SPEAKER_NAME_MAX_GLYPHS
 
 # 置きかえ文字の 字数（ふだん, いちばん 長い とき）
@@ -261,6 +264,10 @@ def check_block(b: TextBlock, is_phone: bool, charmap: set[str], atlas: set[str]
     if " " in plain and "　" in plain:
         add("WARN", "STYLE", "半角と 全角の 空白が まざって いる（新しい 台詞は 半角に そろえる）")
 
+    # 句読点（公式の 台詞は「、」0回・「。」は ヘルプの 文だけ）
+    if "、" in plain or "。" in plain:
+        add("WARN", "STYLE", "台詞に「、」「。」が ある（公式の 台詞は 空白で 区切り、文末は 行の 終わりか ！ ？ …）")
+
     # {KUN}
     if re.search(r"(?<!\{PLAYER\})\{KUN\}", b.raw):
         add("WARN", "STYLE", "{KUN} の まえに {PLAYER} が ない")
@@ -273,6 +280,14 @@ def check_block(b: TextBlock, is_phone: bool, charmap: set[str], atlas: set[str]
         page_text = "".join(page_lines)
         shown = " / ".join(page_lines)
         where = f"{pno}ページ"
+
+        # システムの 文（名札なしで「{PLAYER}は 〜」「〜を もらった！」の 形）に {KUN} を 付けない
+        if name is None and "{PLAYER}{KUN}" in page_text and SYSTEM_TEXT_RE.search(page_text):
+            add("WARN", "STYLE", f"{where}: システムの 文に {{KUN}} が ある（{{PLAYER}} だけに する）", shown)
+        if name is None and re.search(r"てに\s*いれた", page_text):
+            add("WARN", "WORD", f"{where}: 公式は 人から わたされたら「もらった！」（ポケモンも）。「てにいれた！」は わたす 人が いない とき（景品・テーブルの ボール）だけ", shown)
+        if re.search(r"てに[ 　]+いれ", page_text):
+            add("WARN", "STYLE", f"{where}: 公式は「てにいれた」と つめて 書く", shown)
 
         # 名札の 形
         if name is not None:

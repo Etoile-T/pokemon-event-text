@@ -1,28 +1,42 @@
 # ナナミ（グリーンの 姉）
-# 型は novel2agent-jp の キャラテンプレートを 台詞むけに 小さく した もの（LICENSES.md）。
-# 出典: data/text/match_call.inc（Nanami1〜5）、Route9_Frlg、Route2_Frlg、PowerPlant_Frlg、
-#       MiyabiCity・MiyabiCity_BurnedTower_1F、OasisTown・OasisTown_ShrineB1F、
-#       data/scripts/nanami_dates.inc、CeladonCity_DepartmentStore_Roof_Frlg、
-#       BattleFrontier_ScottsHouse_Frlg、LibertyGarden_*、PalletTown_Museum_1F_Frlg、メモ nanami-lore
+# [official] は 日本語版 FR の ナナミ『 の 台詞（グリーンの いえ 6件。find_official.py --speaker ナナミ --map RivalsHouse）。
+#   もとの FR の ナナミは「主人公の となりの いえの おねえさん」で、ポケモンの けづくろいを する 人。
+# [project] は この 改造の 新しい 役（主人公の 恋人・こくさいけいさつ）。型は novel2agent-jp の キャラテンプレートを 小さく した もの（LICENSES.md）。
+# 改造の 台本: data/text/match_call.inc（Nanami1〜5）、Route9_Frlg、Route2_Frlg、PowerPlant_Frlg、
+#   MiyabiCity・MiyabiCity_BurnedTower_1F、OasisTown・OasisTown_ShrineB1F、data/scripts/nanami_dates.inc、
+#   CeladonCity_DepartmentStore_Roof_Frlg、BattleFrontier_ScottsHouse_Frlg、LibertyGarden_*、PalletTown_Museum_1F_Frlg、メモ nanami-lore
 
 id = "nanami"
 name = "ナナミ"
-role = "主人公の 恋人。じつは こくさいけいさつで ダークポケモンを おって いる"
+role = "グリーンの 姉"
 screen_time = "lead"
+
+[official]
+source = "日本語版 FR の ナナミ『 6件（グリーンの いえ）"
+first_person = "（公式の 台詞に 出ない）"
+call_player = "{PLAYER}{KUN}（いつも {KUN}）、あなた"
+call_others = "グリーン → おとうとの {RIVAL}、オーキド → おじいちゃん"
+endings = ["〜わ（みたかったわ・よかったわ）", "〜の（いきてるの・おちゃの じかんなの）", "〜よ・〜のよ", "〜しましょうね・〜しましょうか？", "〜んですってね", "〜て あげて！"]
+catchphrases = ["こんにちは {PLAYER}{KUN}！", "あら？", "ちょうど よかったわ！"]
+length = "1件 1〜2ページ、1ページ 2〜3行（\\l で 3行目を よく 足す）、1行 平均 11〜12字"
+emotion = "おっとり やさしい おねえさん。ポケモンを いきものと して たいせつに する"
+
+[project]
+role = "主人公の 恋人。じつは こくさいけいさつで ダークポケモンを おって いる"
 flaw = "主人公の 身を 案じる あまり、先回りして 自分で かたづけようと する"
 quirk = "あぶない 場面で かけつけた とき、まず 主人公の けがを たずねてから 本題に 入る"
 heat = "ダークポケモンに された こたちを たすける こと"
-
-[voice]
 first_person = "わたし"
-call_player = "{PLAYER}{KUN}（いつも {KUN} を 付ける）"
-call_others = "さん付け（エリカさん・マチスさん・エニシダさん・ナナミさん とは 言わない）。ミオは ミオちゃん。弟は 名前で よぶ（台本には まだ ない）。ポケモンは「あの こ」「その こ」"
-endings = ["〜ね", "〜よ", "〜の", "〜だよ", "〜わ（少し）", "〜ね！"]
+call_others = "さん付け（エリカさん・マチスさん・エニシダさん）。ミオは ミオちゃん。ポケモンは「あの こ」「その こ」"
+endings = ["〜ね", "〜よ", "〜の", "〜だよ", "〜わ"]
 catchphrases = ["ふふ", "そうだ これ", "{PLAYER}{KUN}！ ぶじで よかった", "むりは しないでね", "まってるね"]
-length = "1ページ 1〜2行。場面の 説明は 2〜3ページまで。電話は 3ページ 前後"
-emotion = "うれしい ときは「ふふ」「えへへ」。心配は さきに 口に 出す。かなしい ときは「…」で 間を とって 短く"
 work_voice = "こくさいけいさつと して 名のる ときだけ ていねい語で きっぱり（「こくさいけいさつです！」「〜を たいほします！」）"
-romance = "恋人らしさは におわせる 程度（「こえが ききたくなって かけちゃった」「わたしの じまんの こいびとよ」）。露骨に しない"
+romance = "恋人らしさは におわせる 程度。露骨に しない"
+
+[conflicts]
+list = [
+  "語尾: 公式の ナナミは「〜わ」が 多い（6件で 4回）。改造の ナナミは「〜だよ」「〜ね」が 多く、少し わかい 口調。役が かわったので 改造の 口調を のこし、やさしい 場面では「〜わ」「〜しましょうね」を まぜる と 公式に ちかづく",
+]
 
 [[relations]]
 target = "主人公"
@@ -37,7 +51,7 @@ call = "ミオちゃん"
 [[relations]]
 target = "グリーン"
 kind = "弟"
-emotion = "グリーンからは「ねえちゃん」と よばれる"
+emotion = "公式では「おとうとの {RIVAL}」。グリーンからは「ねえちゃん」"
 
 [[relations]]
 target = "エニシダ"

@@ -1,20 +1,30 @@
 # アポロ（ロケットだん かんぶ。3人の まとめ役）
-# 出典: MiyabiCity_BurnedTower_B1F（Archer1〜4・ArcherDefeat）
+# HGSS の 人で、FR には 出ない。手本は FR の 5のしま そうこの 男の かんぶ（FiveIsland_RocketWarehouse の Admin2）と サカキ。
+#   find_official.py --speaker かんぶ / --speaker サカキ
+# 改造の 台本: MiyabiCity_BurnedTower_B1F（Archer1〜4・ArcherDefeat）
 
 id = "apollo"
 name = "アポロ"
 role = "ロケットだん かんぶ。ランスと アテナに 指示を 出す"
 screen_time = "support"
-flaw = "負けても 計画どおりと 言いはり、時間かせぎに 頼る"
 
-[voice]
+[official]
+model = "FR の 男の かんぶ（3件）と サカキ（12件）"
+first_person = "かんぶ: われわれ・わたし / サカキ: わたし（4）・おれ（5）"
+call_player = "かんぶ: こども / サカキ: きみ（6）・{PLAYER}"
+endings = ["〜だ", "〜のだ（サカキ）", "〜だろうが", "〜が いい（おもいしるが いい）", "〜しよう", "〜もらう"]
+catchphrases = ["くっ……（負け）", "では さらばだ", "まあ いい（したっぱも）", "ほほうッ！（サカキ）"]
+length = "1件 2〜3ページ、1ページ 2〜3行。名のりは 長め"
+emotion = "おちついて いばる。負けても すぐ 次の 手を 言って 引く"
+
+[project]
 first_person = "（台本に まだ 出ない。仲間を ふくめて われわれ）"
-call_player = "こども（見下す。わざと。メモ villain-calls-player-kid）"
+call_player = "こども（見下す。わざと）"
 call_others = "ランス・アテナは 呼びすてで 命令（「ランス アテナ はじめろ」）、シルバーも 呼びすて"
 endings = ["〜か", "〜ろ", "〜もらおう", "〜できる"]
 catchphrases = ["…やるな", "まあ いい", "だが じかんは かせげた"]
-length = "1ページ 1〜2行。言葉は 少ない"
-emotion = "おちついて 冷たい。負けても 声を あげない"
+flaw = "負けても 計画どおりと 言いはり、時間かせぎに 頼る"
+emotion = "冷たい。声を あげない"
 
 [[relations]]
 target = "主人公"

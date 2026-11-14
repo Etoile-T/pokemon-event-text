@@ -1,16 +1,25 @@
 # ライデン（ロケットだんの けんきゅういん。名前は トレーナー表だけ: src/data/trainers_frlg.party）
 # 台詞に 名札は 書かない。見た目から「けんきゅういん」の 名札が 出る。
-# 出典: PowerPlant_Frlg（ShadowScientist*・ScientistGivesUp）
+# 手本は FR の けんきゅういん（見た目が けんきゅういんの 人 85件。シルフや グレンの ロケットだん側も ふくむ）。
+#   find_official.py --speaker けんきゅういん --stats
+# 改造の 台本: PowerPlant_Frlg（ShadowScientist*・ScientistGivesUp）
 
 id = "raiden"
 name = "ライデン（画面では けんきゅういん）"
 role = "はつでんしょで サンダーを ダークポケモンに しようと した 研究者。ナナミに たいほ される"
 screen_time = "minor"
 
-[voice]
-first_person = "（台本に まだ 出ない）"
+[official]
+model = "FR の けんきゅういん"
+first_person = "ぼく（12）・わたし（5）"
+call_player = "{PLAYER}{KUN}（10）・きみ・おまえ・こども（悪い 側の けんきゅういん）"
+endings = ["〜ます", "〜です・〜ですね", "〜かな", "〜んだ"]
+catchphrases = ["なるほど", "ほら"]
+length = "1件 平均 1.8ページ、1ページ 2.5行（\\l で 足す 説明が 多い）"
+
+[project]
 call_player = "おまえ"
-endings = ["〜のだ！", "〜ぞ！", "〜さん（わたさん）", "〜だろう！"]
+endings = ["〜のだ！", "〜ぞ！", "〜だろう！"]
 catchphrases = ["じゃまを するな！", "ばかな…", "サカキさまに なんと いえば…"]
 length = "1ページ 2行。研究の ことだと 少し 長く なる"
 emotion = "研究に のめりこむ。負けると「なぜだ…」と 取りみだす"

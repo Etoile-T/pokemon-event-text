@@ -1,0 +1,79 @@
+# 町の 人の 型（公式）
+# 名前の ない 人は 見た目から 名札が 出る（src/data/speaker_npc_labels.h）。その 見た目ごとの 公式の 話し方。
+# 数は 日本語版 FR の 台詞を 見た目で わけて 数えた もの（find_official.py --speaker <型> --stats）。
+# 文の 例は find_official.py --speaker <型> --shuffle で 読む（ここには 写さない）。
+# カエデの 人たち（kaede_people.toml）など 改造の 町の 人は、この 型を 手本に する。
+
+id = "town_people"
+name = "町の 人の 型"
+role = "名前の ない 町の 人・道の 人"
+screen_time = "minor"
+
+[official.common]
+length = "1件 1〜2ページ（平均 1.4〜1.9）、1ページ 2行、1行 平均 11〜12字"
+topic = "1件で 話題は 1つ。町の うわさ・ポケモンの こつ・自分の くらしの 一場面"
+call_player = "ほとんど 呼ばない。呼ぶ なら きみ（男の 人）・あなた（女の 人）"
+
+[official.boy]
+label = "おとこのこ（40件）"
+first_person = "おれ・ぼく"
+call_player = "きみ"
+endings = ["〜んだ", "〜だよ", "〜だろ", "〜けど", "〜いよ"]
+
+[official.girl]
+label = "おんなのこ（39件）"
+first_person = "わたし（13）・あたし（2）"
+call_player = "{PLAYER}・あなた"
+endings = ["〜の・〜なの", "〜よ", "〜ね", "〜ーい（のばす）", "〜かな"]
+
+[official.young_man]
+label = "おにいさん（112件）"
+first_person = "ぼく（11）・おれ（8）"
+call_player = "きみ（20）・おまえ（6）"
+endings = ["〜るよ", "〜だね", "〜だよ", "〜てね", "〜です（ていねいな 人）"]
+
+[official.young_woman]
+label = "おねえさん（106件）"
+first_person = "わたし（11）・あたし（6）"
+call_player = "あなた（22）"
+endings = ["〜のよ", "〜わね・〜わよ・〜わ", "〜てね", "〜かしら", "〜の"]
+
+[official.man]
+label = "おじさん（132件）"
+first_person = "ぼく・わし・うち"
+call_player = "きみ（15）"
+endings = ["〜よ・〜だよ・〜たよ", "〜かい・〜だい", "〜くれ", "〜なあ", "〜だね"]
+
+[official.old_man]
+label = "おじいさん（79件）"
+first_person = "わし（14）"
+call_player = "あんた（4）・きみ（3）・おまえさん"
+endings = ["〜じゃ（いちばん 多い）", "〜わい", "〜じゃぞ", "〜のう", "〜じゃろう"]
+
+[official.old_woman]
+label = "おばあさん（17件）"
+first_person = "わし・うち"
+call_player = "あなた・おまえさん"
+endings = ["〜じゃ", "〜のう", "〜かい"]
+
+[official.scientist]
+label = "けんきゅういん（85件）"
+first_person = "ぼく（12）・わたし（5）"
+call_player = "{PLAYER}{KUN}（10）・きみ"
+endings = ["〜ます（いちばん 多い）", "〜ですね・〜です", "〜かな", "〜んだ"]
+
+[official.channeler]
+label = "きとうし（60件）"
+first_person = "わし（10）・わたし（6）"
+endings = ["〜じゃ", "〜のじゃ"]
+note = "のりうつられて いる ときは「… … …」「ケケーッ！」。…が 多い（149行に 109）"
+
+[official.nurse]
+label = "ジョーイさん"
+endings = ["〜ます"]
+
+[dont]
+list = ["町の 人に 事情を ぜんぶ 説明させない", "1件に 話題を 2つ 入れない"]
+
+[check]
+tags = []

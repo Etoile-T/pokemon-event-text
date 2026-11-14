@@ -1,23 +1,26 @@
 # カエデシティの 人たち（地図の 名前は MiyabiCity*）
-# 出典: MiyabiCity、MiyabiCity_House1 / House2、MiyabiCity_SageOffice1、MiyabiCity_PokemonCenter、MiyabiCity_Gym（門下生）
+# この 改造の 町。手本は 公式の 町の 人の 型（town_people.toml）。
+# 改造の 台本: MiyabiCity、MiyabiCity_House1 / House2、MiyabiCity_SageOffice1、MiyabiCity_PokemonCenter、MiyabiCity_Gym（門下生）
 
 id = "kaede_people"
 name = "カエデの 人たち"
 role = "ジョウトの エンジュと しまいとしの ふるい みやこの 住人"
 screen_time = "minor"
 
-[voice]
+[official]
+model = "town_people.toml の 型（おじいさん・おねえさん・おにいさん など）。1件 1〜2ページ、話題は 1つ"
+choro = "ぼうさん・じいさん → 公式の おじいさん（わし・〜じゃ・〜わい・〜のう）"
+monka = "門下生 → 公式の きとうし（ゴーストの 場所の 人。…が 多い）。ただし 公式の きとうしは わし・〜じゃ。門下生は 改造で 女性の 口調に した"
+machi = "町の 若い 人 → 公式の おにいさん・おねえさん"
+
+[project]
 call_player = "（ふつうは 呼ばない）"
 length = "1〜2ページ。町の 由来や くらしの 一場面を 一つだけ"
-
-[groups]
 choro = "ちょうろうの やかたの ぼうさん・じいさん: 〜じゃ 〜のう 〜おる 〜なされ（「きを つけなされ」）"
 monka = "ゴーストどうじょうの 門下生（ミヨ・サヨ・カズエ・ユウキ）: 女性。〜わよ 〜のよ 〜なさい。ささやく ように 気味わるく"
 machi = "町の 若い 人: 〜だよ 〜なんだ 〜でしょ。まいこさん・いしだたみ・やけたとう を 身近に 話す"
-pokemon = "町の ポケモン: 鳴き声だけ。名札も かっこも 付けない（ブイブイッ! コーン!）。見た目から 名札が 出る"
-
-[motifs]
-list = [
+pokemon = "町の ポケモン: 鳴き声だけ。名札も かっこも 付けない（ブイブイッ！ コーン！）。見た目から 名札が 出る"
+motifs = [
   "ジョウトの エンジュと しまいとし（まつりで まいこさんが 行き来する）",
   "まいこさん・ぶようじょう",
   "とうは ふたつ あった。一つは かみなりの よるに もえた → やけたとう（ちかに 三犬が ねむる と いう 話）",

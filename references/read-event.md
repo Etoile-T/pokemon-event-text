@@ -22,13 +22,16 @@ novel2agent-jp の「書く まえに 文脈パックを 作り、それだけ�
 ## 2. 前後の イベントを 読む
 
 1. 出る 人物の 名前で さがす（主人公の 家は のぞく）:
-   `grep -rl "ナナミ『" data/maps data/scripts data/text | grep -v PalletTown_PlayersHouse`
+   `grep -rl --exclude-dir='PalletTown_PlayersHouse*' "ナナミ『" data/maps data/scripts data/text`
+   （家の フォルダは grep の 段階で 外す。あとから grep -v で 消す 書き方は 使わない）
 2. 同じ 人物の 直前と 直後の イベント（バッジの 順・旗の 順）の 台詞を 読み、
    - その 時点で 人物が 何を 知って いて 何を 知らないか（novel2agent の 知識状態チェック）
    - 前の 場面で 約束・予告した こと（「3びきは かならず とりかえそう」など）
    - 呼び方・語尾が characters/*.toml と 合って いるか
 3. facts.toml と くいちがう ことが ないか 見る
-4. デバッグの イベントテスト（data/scripts/debug_event_jump.inc）の 注に、イベントの 順と 前提が まとまって いる
+4. 公式に 同じ 種類の 場面が あれば、その 台詞を 読む（`scripts/find_official.py --kind 勝負のまえ --map <地図>` など）。
+   改造の 地図でも 英文の まま の ラベルは ビルドで 公式の 日本語に なるので、まわりの 公式の 台詞と 口調を そろえる
+5. デバッグの イベントテスト（data/scripts/debug_event_jump.inc）の 注に、イベントの 順と 前提が まとまって いる
 
 ## 3. 場面メモ（書き出す 形）
 

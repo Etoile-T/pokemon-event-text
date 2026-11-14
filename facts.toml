@@ -61,6 +61,16 @@ source = "MiyabiCity_BurnedTower_1F / B1F"
 status = "confirmed"
 
 [[established]]
+content = "カエデの やけたとうの 事件には ミオでは なく カスミが 出る。カスミは ロケットだんを おって ジムを あけ、ナナミより さきに カエデに いた。グリーンは ナナミに よばれて 来た。おわると カスミは「ジムで まってる」と ハナダに もどる"
+source = "MiyabiCity_BurnedTower_1F / B1F（2026-11-15 に ミオから かえた）"
+status = "proposed"
+
+[[established]]
+content = "物語の 順番は おつきみやま → ハナダ → カエデ（やけたとう）→ ハナダジム → クチバ。やけたとうが おわるまで カスミは るすで、ハナダジムの まえに おんなのこが 立って いる（VAR_BURNED_TOWER_STATE が 4 か バッジ2で きえる）"
+source = "CeruleanCity_Frlg（GymGirl）、CeruleanCity_Gym_Frlg（MistyIntro）"
+status = "proposed"
+
+[[established]]
 content = "シルバーは やけたとうで ロケットだんの 側に 立った（「ロケットだんの しごとの じゃまだ」）。サカキとの 関係は 台本に まだ 出て いない"
 source = "MiyabiCity_BurnedTower_1F"
 status = "confirmed"

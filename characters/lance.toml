@@ -1,12 +1,24 @@
 # ランス（ロケットだん かんぶ）※ 竜使いの ワタル（英名 Lance）とは 別人
-# 出典: MiyabiCity_BurnedTower_B1F（Proton1・Proton2）、OasisTown_ShrineB1F（RocketIntro・RocketDefeat・RocketFlee）
+# HGSS の 人で、FR には 出ない。FR に ていねい語の 悪役は いないので、手本は 2つ:
+#   すじ立て・引き方 → FR の 男の かんぶ（FiveIsland_RocketWarehouse の Admin2）
+#   ていねい語の 形 → FR の けんきゅういん（〜ます 21・〜です 8 が 文末に 多い）
+#   find_official.py --speaker かんぶ / --speaker けんきゅういん --stats
+# 改造の 台本: MiyabiCity_BurnedTower_B1F（Proton1・Proton2）、OasisTown_ShrineB1F（RocketIntro・RocketDefeat・RocketFlee）
 
 id = "lance"
 name = "ランス"
 role = "ロケットだん かんぶ。めざめのほこらで ダーク・ルギアを おう"
 screen_time = "support"
 
-[voice]
+[official]
+model = "FR の 男の かんぶ ＋ けんきゅういんの ていねい語"
+first_person = "わたし（かんぶ・けんきゅういん）"
+call_player = "かんぶ: こども / けんきゅういん: きみ・{PLAYER}{KUN}"
+endings = ["〜ます", "〜ですね", "〜ですか", "〜でしょう"]
+catchphrases = ["くっ……", "では さらばだ（かんぶ）"]
+length = "1件 1〜3ページ、1ページ 2行"
+
+[project]
 first_person = "（台本に まだ 出ない）"
 call_player = "こども"
 endings = ["〜ですか", "〜ですよ", "〜ませんよ", "〜なさい", "〜ましたね"]

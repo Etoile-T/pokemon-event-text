@@ -1,20 +1,30 @@
 # オーキド博士
-# 出典: PalletTown_ProfessorOaksLab_Frlg（OakWaitComeHere・OakCallBoth・OakTryBattle・OakSkillEnough・OakChoosing*）
-# このファイルの 台本は 全角空白（もとの FR の 書き方）。新しく 足す 台詞は 半角空白で よい
+# [official] は 日本語版 FR の 台詞 42件（find_official.py --speaker オーキド）。
+# 改造の 台本: PalletTown_ProfessorOaksLab_Frlg（OakWaitComeHere・OakCallBoth・OakTryBattle・OakSkillEnough・OakChoosing*）。
+#   この 地図の 台本は 公式の 文が そのまま 入って いる（全角の 空白）
 
 id = "oak"
 name = "オーキド"
 role = "ポケモンはかせ。主人公と グリーンに あいぼうを わたす"
 screen_time = "support"
+
+[official]
+source = "日本語版 FR 42件"
+first_person = "わし（14）、あらたまる ときは わたし（3）"
+call_player = "{PLAYER}（25）、おまえ（10）、ふたりには おまえたち（3）"
+call_others = "グリーン → {RIVAL}（「{RIVAL}よ……！」と 呼びかける）"
+endings = ["〜じゃ（いちばん 多い。じゃ！ だけで 8回）", "〜じゃな", "〜ぞ・〜んぞ", "〜かな", "〜なさい", "〜のう（少し）"]
+catchphrases = ["おお！（10）", "ほう", "わかるか？"]
+length = "1件 平均 2.6ページ、1ページ 2.3行、1行 平均 11.9字"
+emotion = "孫を 見る ような あたたかさ。ほめる ときは 大げさ。しかる ときは「……」で 間を とる"
+
+[project]
 quirk = "あいぼうを わたす とき、その ポケモンの ちょっと 変わった ところを うれしそうに 言う"
 
-[voice]
-first_person = "わし"
-call_player = "{PLAYER}、ふたりとも、おまえたち"
-endings = ["〜じゃ", "〜じゃぞ", "〜わい", "〜なさい", "〜のう"]
-catchphrases = ["ほう！", "ふむ", "うむ！", "まちなさい"]
-length = "1ページ 2行。たのみごとは 3ページ 前後"
-emotion = "孫を 見る ような あたたかさ。ほめる ときは 大げさ"
+[conflicts]
+list = [
+  "口ぐせ: 前の 表の「うむ！」「ふむ」「まちなさい」は 公式の オーキドの 台詞に ない（0回）。「おお！」「ほう」を つかう",
+]
 
 [[relations]]
 target = "グリーン"
@@ -22,11 +32,11 @@ kind = "孫"
 
 [[relations]]
 target = "ナナミ"
-kind = "孫"
+kind = "孫（ナナミからは おじいちゃん）"
 
 [dont]
 list = ["若者言葉", "ていねい語で へりくだる"]
 
 [check]
 tags = ["オーキド"]
-ng_words = ["おれ", "ぼく", "だぜ", "わたし"]
+ng_words = ["おれ", "ぼく", "だぜ"]

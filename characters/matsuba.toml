@@ -1,13 +1,22 @@
 # マツバ（カエデ ゴーストどうじょうの しはん）
-# 出典: MiyabiCity_Gym（MortyIntro・MortyDefeat・MortyPostBattle・MortyAfterGift）、MiyabiCity（GymSign）
-# どうじょうの 台詞は 台本の 注に「ぜんぶ かりの もの」と ある
+# HGSS の 人で、FR には 出ない。手本は FR の 町の おにいさんの 型（ぼく・きみ・〜るよ・〜だね）と、
+#   ジムリーダーの 名のりの 長さ（2〜3ページ）。find_official.py --speaker おにいさん --stats
+# 改造の 台本: MiyabiCity_Gym（MortyIntro・MortyDefeat・MortyPostBattle・MortyAfterGift）、MiyabiCity（GymSign）
+#   どうじょうの 台詞は 台本の 注に「ぜんぶ かりの もの」と ある
 
 id = "matsuba"
 name = "マツバ"
 role = "カエデシティの ゴーストどうじょうの しはん（ジムでは ない）。勝つと ヒトモシ か ヨマワルを くれる"
 screen_time = "minor"
 
-[voice]
+[official]
+model = "FR の おにいさん（112件）と ジムリーダー"
+first_person = "ぼく（11）・おれ（8）"
+call_player = "きみ（20）"
+endings = ["〜るよ", "〜だね", "〜だよ", "〜てね", "〜よう"]
+length = "おにいさんは 1件 平均 1.4ページ、1ページ 2.3行。ジムリーダーの 名のりは 2〜3ページ"
+
+[project]
 first_person = "ぼく"
 call_player = "きみ"
 endings = ["〜だね", "〜かな", "〜んだ", "〜だよ", "〜してね"]

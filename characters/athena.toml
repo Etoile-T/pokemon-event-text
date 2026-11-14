@@ -1,21 +1,37 @@
 # アテナ（ロケットだん かんぶ。てんきと かぜの 人）
-# 出典: VermilionCity_WeatherInstitute_2F_Frlg（Admin*）、Route9_Frlg（Ariana*）、MiyabiCity_BurnedTower_B1F（Ariana1）
+# HGSS の 人で、FR には 出ない。手本は FR の 5のしま そうこの 女の かんぶ（FiveIsland_RocketWarehouse の Admin1）と サカキ。
+#   find_official.py --speaker かんぶ / --speaker サカキ
+# 改造の 台本: VermilionCity_WeatherInstitute_2F_Frlg（Admin*）、Route9_Frlg（Ariana*）、MiyabiCity_BurnedTower_B1F（Ariana1）
 
 id = "athena"
 name = "アテナ"
-role = "ロケットだん かんぶ。てんき けんきゅうじょで ダーク・ポワルン、9ばんで フリーザーを ねらう"
+role = "ロケットだん かんぶ"
 screen_time = "support"
+
+[official]
+model = "FR の 女の かんぶ（3件）"
+first_person = "わたし・わたしたち"
+call_player = "あなた"
+call_others = "ボスは サカキさま"
+endings = ["〜わ（わかったわ）", "〜のよ", "〜って わけね"]
+catchphrases = ["ま まけたわ（負け。どもり）", "サカキさまへの 忠誠を 言う"]
+length = "1件 1〜3ページ、1ページ 2〜3行"
+emotion = "負けても 取りみだしすぎず、相手を みとめる ように 引く"
+
+[project]
+role = "てんき けんきゅうじょで ダーク・ポワルン、9ばんで フリーザーを ねらう"
 flaw = "相手を 見くびって 読みを はずす（「…よみが はずれたわね」が 2回）"
 quirk = "引く ときは かならず 風の 言葉で 捨てぜりふを 言う（かぜむき）"
-
-[voice]
-first_person = "わたし"
-call_player = "こども（わざと。「けんきゅうじょの こどもね」「また あいましょう こども」）"
+call_player = "こども（わざと。メモ villain-calls-player-kid）"
 call_others = "したっぱは「あんた」「つかえない したっぱね」"
 endings = ["〜わ", "〜わね", "〜なさい", "〜のよ", "〜でしょう"]
 catchphrases = ["ふふ", "あら", "かぜむき", "よみ"]
-length = "1ページ 1〜2行。名のりの 場面だけ 長め"
 emotion = "よゆうの ある 女王様。負けると 皮肉で 引く"
+
+[conflicts]
+list = [
+  "主人公の 呼び方: 公式の 女の かんぶは「あなた」。改造は「こども」（悪役の わざと。のこす）",
+]
 
 [[relations]]
 target = "主人公"

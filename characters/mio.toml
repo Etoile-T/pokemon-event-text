@@ -1,8 +1,11 @@
 # ミオ（主人公の 家に いる 年上の 女性。血縁では ない 同棲相手）
+# この 改造の 人で、公式には いない。手本は FR の ナナミ（やさしい 年上の 女性、{PLAYER}{KUN}）と、
+#   町の おねえさんの 型（わたし・あなた・〜のよ・〜わね）。find_official.py --speaker ナナミ / --speaker おねえさん --stats
 # 主人公の 家（PalletTown_PlayersHouse_*）の 台本は 読んで いない。家の 台詞を 書く ときは、
-# ユーザーに 見せて もらうか、ユーザーに 書いて もらう。
-# 出典: ViridianForest_Frlg（MioCall）、data/text/match_call.inc（Mio1〜3）、
-#       MiyabiCity_BurnedTower_1F / B1F、メモ protagonist-adult
+#   ユーザーに 見せて もらうか、ユーザーに 書いて もらう。
+# 出典: ViridianForest_Frlg（MioCall）、data/text/match_call.inc（Mio1〜3）、メモ protagonist-adult
+# 2026-11-15: カエデの やけたとうの 事件には 出なく なった（カスミに かわった）。前の 台詞の 控えは
+#   ~/GitHub_RomHack/PokeEm-local-art-backup/misty_kaede_before/
 # 名前の ゆらい: おねえちゃん → ミサキ → ミオ（2026-11-03）。古い 呼び名は 使わない。
 # 注意: data/text/trainers.inc の「ミオ『あたしたち ふたご…」は エメラルドの ふたごの トレーナーで、別人。
 
@@ -10,19 +13,31 @@ id = "mio"
 name = "ミオ"
 role = "主人公と くらす 年上の 恋人。家を まもって 帰りを 待つ"
 screen_time = "lead"
+
+[official]
+model = "FR の ナナミ（6件）と 町の おねえさん（106件）"
+first_person = "わたし（おねえさん 11 / あたし 6）"
+call_player = "ナナミ: {PLAYER}{KUN} / おねえさん: あなた（22）"
+endings = ["〜わ・〜わね・〜わよ", "〜のよ・〜の", "〜てね", "〜かしら"]
+length = "おねえさんは 1件 平均 1.4ページ、1ページ 2.2行"
+
+[project]
 flaw = "さみしさを 言わずに 明るく ふるまい、あとで まとめて あふれる"
 quirk = "電話の さいしょに 名のる（「もしもし？ ミオだよ」）"
 heat = "主人公が けがなく 家に 帰って くる こと"
-
-[voice]
 first_person = "わたし"
-call_player = "いつも {PLAYER}{KUN}（その場でも 電話でも。2026-11-15 に きまった）"
+call_player = "いつも {PLAYER}{KUN}（その場でも 電話でも。2026-11-15 に ユーザーが きめた）"
 call_others = "ナナミさん"
 endings = ["〜だよ", "〜ね", "〜からね", "〜てよね", "〜しようね"]
 catchphrases = ["もしもし？ ミオだよ", "いえで まってるからね", "むちゃは だめだよ", "けが してない？"]
 length = "とても 短い。1ページ 1行が 多い。電話でも 3ページまで"
-emotion = "おどろきや 安心は「……」を 2つ 重ねて 間を とる（「まにあった……！」「……きえちゃった」）。うれしい ときは すなおに「うれしい！」"
+emotion = "おどろきや 安心は「……」を 2つ 重ねて 間を とる（「まにあった……！」）。うれしい ときは すなおに「うれしい！」"
 romance = "大人の 恋人。におわせる 程度に とどめ、露骨な 表現は しない"
+
+[conflicts]
+list = [
+  "「……」: 公式は ふだん「…」1つ（84%）。ミオの「……」は 改造の 個性と して のこすが、1ページに 何度も 使わない",
+]
 
 [[relations]]
 target = "主人公"
@@ -36,7 +51,7 @@ call = "ナナミさん"
 
 [[relations]]
 target = "グリーン"
-kind = "顔見知り。やけたとうでは いっしょに 来る"
+kind = "顔見知り"
 emotion = "グリーンからは「ミオさん」"
 
 [dont]
