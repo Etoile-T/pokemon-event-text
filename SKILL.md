@@ -1,6 +1,6 @@
 ---
 name: pokemon-event-text
-description: この FR 改造（PokeEm-expansion-CanuseJP）で、イベントの 台詞・地の文・電話（pokenavcall）の 文を 新しく 書く、または 直す ときに 使う。手本は 元の 日本語版 ファイアレッドの 台詞。ROM から 取り出した 公式の 台詞の 控えで 同じ 人・同じ 場面の 型を 読んでから、人物の 表（characters/*.toml の [official] と [project]）と 決まった 事実（facts.toml）に そって、公式の 書き方（かな・文節ごとの 空白・1行 17字・1ページ 2行・名札「名前『」）で 書き、見直して scripts/check_event_text.py で 検査する。グリーン・カスミ・ナナミ・ミオ・ロケットだん・町の 人 などの 台詞は ここから。
+description: この FR 改造（PokeEm-expansion-CanuseJP）で、イベントの 台詞・地の文・電話（pokenavcall）の 文、特性・道具・わざの 説明文を 新しく 書く、または 直す ときに 使う。手本は 元の 日本語版 ファイアレッドの 台詞。ROM から 取り出した 公式の 台詞の 控えで 同じ 人・同じ 場面の 型を 読んでから、人物の 表（characters/*.toml の [official] と [project]）と 決まった 事実（facts.toml）に そって、公式の 書き方（かな・文節ごとの 空白・1行 17字・1ページ 2行・名札「名前『」）で 書き、見直して scripts/check_event_text.py で 検査する。グリーン・カスミ・ナナミ・ミオ・ロケットだん・町の 人 などの 台詞は ここから。
 ---
 
 # イベントの 台詞を 書く
@@ -50,6 +50,14 @@ description: この FR 改造（PokeEm-expansion-CanuseJP）で、イベント�
    - リポジトリ全体の 引用符・衝突の 印は `python3 tools/check_jp_text.py`（この 道具は それと 重ならない 所を 見る）
 7. **見せる**: **手本に した 公式の 台詞（ラベル名と、あわせた 型）** → 下書き → 気に なった 所 → 直した 台詞 → 検査の 結果。新しく 決まった 事実は facts.toml に `proposed` で 足す
 
+## 特性・道具・わざの 説明を 書く ときは
+
+台詞と 同じ スキルで 書く。手順は 短い:
+1. 今 入って いる 説明から 手本を さがす: `python3 -I .claude/skills/pokemon-event-text/scripts/check_description.py ability --grep "フィールド"`（種類は ability / item / move）
+2. `references/format.md` の「特性・道具・わざの 説明」の 決まりで 書く（特性は 1行で いちばんの 売りだけ・名詞を ならべない、道具は 3行で 1つの 文、わざは 効果＋札の 2行）
+3. 検査: `check_description.py ability --text "下書き"` または `--name 定数の 一部`。リポジトリ全体は `--all`
+4. ビルドして、つよさの 画面・バッグで 撮って 枠に おさまるか 見る
+
 ## 守る こと
 
 - 英語の 台本（vendor/pokefirered や data/maps/*_Frlg の 英文）は ビルドで 日本語に 置きかわる 元。手本に しない
@@ -72,4 +80,5 @@ description: この FR 改造（PokeEm-expansion-CanuseJP）で、イベント�
 | `scripts/extract_official_text.py` | ROM から 公式の 台詞を 取り出して 控えに 書く（控えは スキルの 外） |
 | `scripts/find_official.py` | 控えから 公式の 台詞を さがす・数える（--speaker --kind --map --grep --stats --style） |
 | `scripts/check_event_text.py` | 台詞の 検査（行の 長さ・字・名札・』・鳴き声・禁止語・人物の 呼び方・句読点） |
+| `scripts/check_description.py` | 特性・道具・わざの 説明の 検査（行の 数・字数・漢字・名詞の ならべ・わざの 重複）と 手本さがし（--grep） |
 | `LICENSES.md` | novel2agent-jp と humanizer-ja-modes の MIT 表示 |
