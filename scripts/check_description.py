@@ -36,7 +36,7 @@ MOVE_TAGS = {
 }
 CONTROL = re.compile(r"\{[^}]*\}")
 KANJI = re.compile(r"[一-鿿]")
-ENTRY = re.compile(r"\[((?:ABILITY|ITEM|MOVE)_\w+)\]\s*=\s*\{(.*?)\n    \},", re.S)
+HEAD = re.compile(r"^\s*\[((?:ABILITY|ITEM|MOVE)_\w+)\]\s*=", re.M)
 DESC = re.compile(r"\.description\s*=\s*COMPOUND_STRING\((.*?)\)\s*,", re.S)
 
 
@@ -49,11 +49,14 @@ def visible(line):
 
 
 def entries(kind):
+    """[定数] = { の 行で 区切り、その 中の さいしょの .description を 取る（閉じかっこの 字下げに よらない）"""
     text = Path(FILES[kind]).read_text(encoding="utf-8")
-    for name, body in ENTRY.findall(text):
-        match = DESC.search(body)
+    heads = list(HEAD.finditer(text))
+    for i, head in enumerate(heads):
+        end = heads[i + 1].start() if i + 1 < len(heads) else len(text)
+        match = DESC.search(text, head.end(), end)
         if match:
-            yield name, strings_of(match.group(1))
+            yield head.group(1), strings_of(match.group(1))
 
 
 def looks_like_noun_list(line):
