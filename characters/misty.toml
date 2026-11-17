@@ -41,7 +41,7 @@ call = "ナナミさん"
 
 [[relations]]
 target = "グリーン"
-kind = "顔見知り。グリーンからは「カスミさん」（ユーザーが きめた）"
+kind = "顔見知り。グリーンからは「カスミ」（呼びすて。2026-11-15 に きまった、green.toml と おなじ）"
 
 [dont]
 list = [
@@ -57,5 +57,5 @@ list = []
 
 [check]
 tags = ["カスミ"]
-player_call = "{PLAYER}"
+player_call = "きみ"
 ng_words = ["おれ", "ぼく", "ガキ", "だぜ", "です", "ます", "あたし"]
