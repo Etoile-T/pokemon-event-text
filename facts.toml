@@ -25,6 +25,16 @@ source = "メモ nanami-lore、Route9_Frlg、PowerPlant_Frlg"
 status = "confirmed"
 
 [[established]]
+content = "ナナミが こくさいけいさつだと 主人公に 明かすのは 9ばんどうろ（フリーザーの 場面）。それまでの リバティガーデンでは けいかんとの 間がらを きかれても はぐらかす。べっそう（BattleFrontier_ScottsHouse_Frlg）は 明かす まえに 来ても あとに 来ても 通じる よう「ここが わたしの きょてん」と だけ 言う"
+source = "ユーザーの 指示（2026-11-16）、Route9_Frlg（NanamiPolice・NanamiTakesGrunt）、LibertyGarden_Exterior_Frlg（NanamiLeave）"
+status = "confirmed"
+
+[[established]]
+content = "ナナミは 恋人だが、口説き文句や 夜・へやを におわせる 言い方は 入れない（ユーザー「消しちゃっても いいよ なんか 変だし」）。グリーンの いえの ナナミは 公式の 型（あいさつ・ポケモンの 話・けづくろい・なつき度）で 話す。デートや 電話で 恋人と わかる ことは のこす。家で まつ・テレビを みて なくのは ミオの 役"
+source = "ユーザーの 指示（2026-11-16）"
+status = "confirmed"
+
+[[established]]
 content = "ナナミの 拠点は バトルフロンティアの べっそう（もとの エニシダの 家、BattleFrontier_ScottsHouse_Frlg）。ちかしつに ろうや が あり、たおした ダークポケモンが おくられる"
 source = "メモ nanami-lore / pending-decisions、BattleFrontier_ScottsHouse_Frlg"
 status = "confirmed"
@@ -76,14 +86,24 @@ source = "MiyabiCity_BurnedTower_1F"
 status = "confirmed"
 
 [[established]]
-content = "はつでんしょの けんきゅういん（トレーナー名 ライデン）が サンダーを ダークに した。スナッチの あと ナナミが たいほ"
-source = "PowerPlant_Frlg"
+content = "はつでんしょの サンダーの 場面（ライデン・ナナミ・ダーク・サンダー）は 2026-11-15 に けした。サンダーは ロケットだんに さらわれた ことに なって いて、イワヤマトンネルの 北の 入り口で おまわりさんが「しらべて いる」と 言う だけ。続きの 話は まだ ない（書かない）"
+source = "PowerPlant_Frlg・Route10_Frlg（RockTunnelPoliceman）"
 status = "confirmed"
 
 [[established]]
 content = "アテナは クチバの てんき けんきゅうじょで ダーク・ポワルンを 使い、9ばんで くろい オーラの フリーザーを ねらった"
 source = "VermilionCity_WeatherInstitute_2F_Frlg、Route9_Frlg"
 status = "confirmed"
+
+[[established]]
+content = "アテナ・ランスは やけたとうで 主人公を 見て いる。あとで 会う ときは 見覚えの ある 言い方に する（アテナ「やけたとうに いた こどもね」、ランス「やけたとうの こどもですか」）"
+source = "VermilionCity_WeatherInstitute_2F_Frlg、Route9_Frlg、OasisTown_ShrineB1F"
+status = "proposed"
+
+[[established]]
+content = "ランスは めざめのほこらで まけ、あなぬけのヒモで そとに でた ところを ナナミが つかまえた"
+source = "OasisTown_ShrineB1F（NanamiCaught）"
+status = "proposed"
 
 # ---------- ダークポケモン ----------
 [[established]]
@@ -98,12 +118,17 @@ status = "confirmed"
 
 [[established]]
 content = "こころを ひらく ことを 画面では「リライブ」と よぶ（わざの「じょうか」は 別）。いっしょに たたかったり あるいたり すると こころの とびらが ひらく"
-source = "メモ pending-decisions、data/text/match_call.inc（Nanami2）"
+source = "メモ pending-decisions、PalletTown_RivalsHouse_Frlg（HowToSnag。リライブの 説明は ここ 1回 だけ。ほかの 場面では「ヒメグマ げんき？」の ような 一言に とどめる）"
 status = "confirmed"
 
 [[established]]
-content = "スナッチ しそこねた ダークポケモンは 再戦に しない。たおすと ナナミの べっそうの ちかしつに おくられる"
-source = "メモ pending-decisions（ユーザーの 方針）"
+content = "スナッチ しそこねた ダークポケモンは、しばらく（48歩）すると ナナミから「つかまえた」と 電話が 来る。その こは バトルフロンティアの ナナミの べっそうの ちかしつ（ろうや）に いて、あとで もう いちど 戦って スナッチ できる。電話は ニビの あと（ビクティニの 電話の あと）から 来るので、べっそうに まだ 行って いない ときでも 通じる 言い方に する"
+source = "ユーザーが 2026-11-16 に きめた。src/shadow_cell.c（TryStartShadowCellCall）、data/scripts/shadow_cell.inc"
+status = "confirmed"
+
+[[established]]
+content = "その場の 再戦は ない。おつきみやま・シオンセンター（タワー 4F）・ポケモンやしき・てんき けんきゅうじょ（アテナの ポワルン）も ハナダ・サントアンヌ・アジトと 同じく「にげて いった」→ ナナミが べっそうの ろうやに かくり。アテナは ポワルンが にげても ひきあげ、しょちょうは いしと なみのりを くれる"
+source = "2026-11-16 ユーザーが きめた。src/shadow_cell.c"
 status = "confirmed"
 
 [[established]]
@@ -138,6 +163,32 @@ content = "マサラの ショップは びじゅつかんの 建物に なっ�
 source = "メモ pending-decisions"
 status = "confirmed"
 
+# ---------- ホウエン ----------
+[[established]]
+content = "ホウエンを しずめたのは カイオーガ（ふりつづく おおあめと たかなみ）。グラードン・レックウザが しずめた とは 言わない。のこったのは カイナ・ミナモ・キナギの しま だけで、うみの すいどうで むすばれて いる。ミシロ・ムロ・ルネ などは しずんだ"
+source = "2026-11-16 ユーザーが きめた。VermilionCity_WeatherInstitute_1F_Frlg（WallPoster）"
+status = "confirmed"
+
+[[established]]
+content = "1のしまの ネットワークマシンは「ホウエンと こうかんする きかい」では なく、しずんだ ホウエンの のこった しま（カイナ・ミナモ・キナギ）と つうしんを つなぐ そうち。ルビーと サファイアは その ために いる いし。ニシキが ルビーを たのむのは 殿堂入りの あと。つながると ホウエンの しまとの とりひき（2のしまの みせ）や れんらく（1のしまの かくとうむすめの ミナモの カレ）が できる"
+source = "ユーザーが きめた 方向（2026-11-16）。OneIsland_PokemonCenter_1F_Frlg、OneIsland_Frlg、TwoIsland_Frlg"
+status = "proposed"
+
+[[established]]
+content = "マサラの みなとから ふねで いける ホウエンの しまは カイナ だけ。でるのは サファイアを わたして ホウエンの しまと つうしんが つながって から（それまでは バトルフロンティアと リバティガーデン だけ）。ニシキが そのとき 教える。カイナ・109ばんの 野生は 4〜7のしまと 同じ つよさ"
+source = "2026-11-16 ユーザーが「通信のあとに入れるべき」「レベルも調整するべき」「船でいけるのはカイナだけ」と きめた。PalletTown_Harbor_Frlg、OneIsland_PokemonCenter_1F_Frlg（FerryToHoennOpen）"
+status = "confirmed"
+
+[[established]]
+content = "ロケットだんが ルビー・サファイアを ねらうのは、ホウエンの しまへの ただ ひとつの つうしんを にぎって しまの ひとを したがわせる ため。したっぱは「かんぶが いってた おたから」と ききかじり 程度で、かんぶと サファイアを もちさった けんきゅういんが 理由を 口に する"
+source = "ユーザーが きめた 方向（2026-11-16）。FiveIsland_RocketWarehouse_Frlg（GideonIntro・Admin2PostBattle）、MtEmber_Exterior_Frlg（WellTryDiggingHere）"
+status = "proposed"
+
+[[established]]
+content = "ホウエンの 歴史は てんき けんきゅうじょ 1F の かんばん 1つで 語る。しょちょう・けんきゅういん・アテナは くりかえさない"
+source = "2026-11-16 台詞の 直し"
+status = "proposed"
+
 # ---------- 道具・ポケナビ ----------
 [[established]]
 content = "ポケナビの「エントリーコール」に ナナミと ミオが 入って いる。家の 中では 電話できない"
@@ -145,7 +196,7 @@ source = "メモ pending-decisions、ViridianForest_Frlg"
 status = "confirmed"
 
 [[established]]
-content = "ポケナビには「そらとぶタクシー」（ニビジムの あと ナナミの 電話で）と「どこでもボックス」が ある"
+content = "ポケナビには「そらをとぶタクシー」（ニビジムの あと ナナミの 電話で）と「どこでもボックス」が ある"
 source = "メモ pending-decisions"
 status = "confirmed"
 
@@ -163,4 +214,19 @@ status = "confirmed"
 [[established]]
 content = "ナナミは 人を さん付けで よぶ。主人公は {PLAYER}{KUN}、ミオは ミオちゃん"
 source = "メモ nanami-lore"
+status = "confirmed"
+
+[[established]]
+content = "エリカ（バッジ4）の まえは ヤマブキへも セキチクへも いけない。ヤマブキの 4つの ゲートの おまわりさんは「ロケットだんが うろついて あぶない タマムシジムの バッジを もった トレーナーしか とおせない」（おちゃが あっても）。13ばんの 12ばんがわの はしは こわれて いて、こうじの ひと 2人が なおして いる（バッジ4で いなくなる）"
+source = "2026-11-16 ユーザーが「工事中って感じ 橋が壊れてるみたいな」と きめた。Route5_SouthEntrance_Frlg（NeedRainbowBadge）、Route13_Frlg（BridgeWorker1・2）"
+status = "confirmed"
+
+[[established]]
+content = "アスターシティは もともと シオンタウン。カイオーガの ぼうそうで ホウエンと カントーの ひがし はんぶんが しずんだ とき、トクサネシティから ひなんみんが きて、ポケモンタワーは いちじてきに うちゅうセンター（シオンセンター）に たてなおされた。だから センターには ポケモンの たましいが ねむって いて ゆうれいが でる。いまは なくなった ポケモンを ロケットで ほしへ おくる（うちゅうそう）。ロケットだんが いすわって うちあげが とまり、ほしへ いけない ガラガラの たましいが さまよって いた。フジは いのりに きた"
+source = "2026-11-16 ユーザーが きめた（「元々シオンタウン…トクサネから避難民…タワーは一時的に宇宙センターとして建て直された」、宇宙葬を えらんだ）。LavenderTown_House3_Frlg（WatchStars）、LavenderTown_SionCenter_1F/2F_Frlg、LavenderTown_Frlg"
+status = "confirmed"
+
+[[established]]
+content = "タマムシの アジト 地下 4かいで アポロ（みぎ）と ランス（ひだり、ていねい語）を たおすと、まんなかの ワープの ゆかで ロケットだんの アリーナへ。サカキは ライコウを ボールから だし「やけたとうの ライコウ… その ちからを さらに ひきだす ため… いま さいごの ちょうせいを して いる ところだ」と 言って、そうちの レーザーで 3かい ちからを そそぐ（3かいめで 紫の 炎を まとう）。「こころを とざした ポケモンは… その ちからを ぞんぶんに ふるう」「…その ちから きみで ためすと しよう」で 勝負。ライコウは 手持ちの さいご。スナッチ できたら「ふッ… その ちから おぼえて おこう」、ナナミから でんわ。しそこねたら ライコウは かべを やぶって にげ、ナナミの べっそうの ろうやへ（「まあ いい いずれ また われわれの ものに なる」）。サカキは スピアーに どくガスを はかせて きえ、シルフスコープが のこる"
+source = "2026-11-17 ユーザーが きめた（「無言でライコウぶん投げてくるのがアレ」「去っていくときはスピアーで毒ガス」「手前の二人を幹部の女以外の二人に」「最終調整をしているところだにしよう」「レーザーを三回に」）。RocketHideout_B4F_Frlg・RocketHideout_Arena_Frlg、docs/scenes/rocket_hideout_giovanni.md"
 status = "confirmed"
