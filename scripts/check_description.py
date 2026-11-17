@@ -88,8 +88,6 @@ def check(kind, name, desc):
             warns.append(f"{i}行目の 頭に {{JPN}} が ない（ほかの 道具に そろえる）")
     if kind == "ability" and visible(desc) != "とくせい なし" and any(looks_like_noun_list(l) for l in lines):
         warns.append("名詞を ならべて いる ように 見える。動きの ある 短い 文に（例: ひこうわざを さきに だせる）")
-    if kind == "move" and len(lines) == 2 and visible(lines[0]) == visible(lines[1]):
-        warns.append("1行目と 2行目が 同じ（2行目は さわる／さわらない などの 札か、効果の つづき）")
     return errors, warns
 
 

@@ -80,5 +80,5 @@ description: この FR 改造（PokeEm-expansion-CanuseJP）で、イベント�
 | `scripts/extract_official_text.py` | ROM から 公式の 台詞を 取り出して 控えに 書く（控えは スキルの 外） |
 | `scripts/find_official.py` | 控えから 公式の 台詞を さがす・数える（--speaker --kind --map --grep --stats --style） |
 | `scripts/check_event_text.py` | 台詞の 検査（行の 長さ・字・名札・』・鳴き声・禁止語・人物の 呼び方・句読点） |
-| `scripts/check_description.py` | 特性・道具・わざの 説明の 検査（行の 数・字数・漢字・名詞の ならべ・わざの 重複）と 手本さがし（--grep） |
+| `scripts/check_description.py` | 特性・道具・わざの 説明の 検査（行の 数・字数・漢字・名詞の ならべ）と 手本さがし（--grep） |
 | `LICENSES.md` | novel2agent-jp と humanizer-ja-modes の MIT 表示 |
