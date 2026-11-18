@@ -1,6 +1,6 @@
 # カエデシティの 人たち（地図の 名前は MiyabiCity*）
 # この 改造の 町。手本は 公式の 町の 人の 型（town_people.toml）。
-# 改造の 台本: MiyabiCity、MiyabiCity_House1 / House2、MiyabiCity_SageOffice1、MiyabiCity_PokemonCenter、MiyabiCity_Gym（門下生）
+# 改造の 台本: MiyabiCity、MiyabiCity_House1 / House2、MiyabiCity_SageOffice1、MiyabiCity_PokemonCenter、MiyabiCity_Gym（門下生）、MiyabiCity_Theater（まいこはん・ジェントルマン）
 
 id = "kaede_people"
 name = "カエデの 人たち"
@@ -19,6 +19,7 @@ length = "1〜2ページ。町の 由来や くらしの 一場面を 一つだ�
 choro = "ちょうろうの やかたの ぼうさん・じいさん: 〜じゃ 〜のう 〜おる 〜なされ（「きを つけなされ」）"
 monka = "ゴーストどうじょうの 門下生（ミヨ・サヨ・カズエ・ユウキ）: 女性。〜わよ 〜のよ 〜なさい。ささやく ように 気味わるく"
 machi = "町の 若い 人: 〜だよ 〜なんだ 〜でしょ。まいこさん・いしだたみ・やけたとう を 身近に 話す"
+maiko = "ぶようじょうの まいこはん（コウメ・サクラ・タマオ・サツキ・コモモ）: エンジュで まいを ならった。軽い 京ことば（うち・〜どす・〜はる・〜おくれやす・おおきに）。客は「おきゃくさん」と 呼び、あんた とは 言わない。1件 1〜2ページ。自分の イーブイの 進化形の まいを 話す"
 pokemon = "町の ポケモン: 鳴き声だけ。名札も かっこも 付けない（ブイブイッ！ コーン！）。見た目から 名札が 出る"
 motifs = [
   "ジョウトの エンジュと しまいとし（まつりで まいこさんが 行き来する）",
