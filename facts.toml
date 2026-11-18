@@ -241,3 +241,13 @@ content = "トキワジムの サカキは ダーク・スイクンを 見せて
 source = "2026-11-18 ユーザーが ねて いる あいだに Claude が 作った（ユーザーの 確認 まだ）。ViridianCity_Gym_Frlg、OasisTown_ShrineB1F"
 status = "proposed"
 
+
+[[established]]
+content = "ナナミが くれる しあわせタマゴは、ネレアで「ちゃんと おれい させてね」と 約束した おれい。ナナミの 家で「ネレアでは ほんとうに ありがとう」「こくさいけいさつの なかまも みんな おどろいてたわ」と わたす"
+source = "2026-11-18 仮の 台詞を 差しかえた とき（ユーザーの 確認 まだ）。PalletTown_RivalsHouse_Frlg の LugiaThanks"
+status = "proposed"
+
+[[established]]
+content = "ビクティニの 旅の まえ、ナナミの へやで やすむ 場面で、ナナミは ニビで さそった とき ことわられないか どきどき して いたと 打ちあける（ニビの「ことわっても だめだからね」の うらがえし）"
+source = "2026-11-18 仮の 台詞を 差しかえた とき（ユーザーの 確認 まだ）。PalletTown_RivalsHouse_2F_Frlg"
+status = "proposed"
