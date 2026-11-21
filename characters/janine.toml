@@ -1,7 +1,7 @@
 # アンズ（セキチクジムの ジムリーダー。どくタイプの くのいち。キョウの むすめ）
 # FR には 出ない 人物なので [official] は 原作（金銀・HGSS）の 設定を まとめた もの（ポケモンWiki）。
 # [project] は この 改造の 立場（父が ジムを はなれ、あとを ついだ。キョウの 場面で 父の しょうたいを しる）。
-# 改造の 台本: FuchsiaCity_Gym_Frlg（Koga* の ラベル。中身は アンズ。Janine*）、leader_rematch.inc、match_call.inc（KogaFrlg1〜2）
+# 改造の 台本: FuchsiaCity_Gym_Frlg（Koga* の ラベル。中身は アンズ。Janine*）、IceIsland_Frlg（Janine*）、leader_rematch.inc、match_call.inc（KogaFrlg1〜2）
 
 id = "janine"
 name = "アンズ"
@@ -18,9 +18,9 @@ party = "クロバット・マタドガス・アリアドス・モルフォン"
 father = "父を「ちちうえ」と よぶ"
 
 [project]
-role = "キョウが だまって ジムを はなれた ため、あとを まかされた。父の しのびの わざを うけつぐ と きめて いる"
+role = "キョウが ゆくえふめいの あいだ ジムを 閉鎖して いた。ナナミの でんわで 父が ロケットだんに はいったと しり、主人公と こおりの しまへ。場面の あと ジムを ついで リーダーに なる"
 party = "クロバット・マタドガス・アリアドス・モルフォン・メガペンドラー（再戦は 6匹）"
-after_scene = "キョウの 場面の あと「あたい ちちうえを かならず つれもどす！」"
+after_scene = "キョウの 場面の あと「ないてる ばあいじゃ ないね」と ジムへ もどる。ジムの トレーナーは アンズを「おじょうちゃん」と よぶ"
 
 [conflicts]
 list = []
