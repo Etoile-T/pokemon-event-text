@@ -1,0 +1,45 @@
+# アンズ（セキチクジムの ジムリーダー。どくタイプの くのいち。キョウの むすめ）
+# FR には 出ない 人物なので [official] は 原作（金銀・HGSS）の 設定を まとめた もの（ポケモンWiki）。
+# [project] は この 改造の 立場（父が ジムを はなれ、あとを ついだ。キョウの 場面で 父の しょうたいを しる）。
+# 改造の 台本: FuchsiaCity_Gym_Frlg（Koga* の ラベル。中身は アンズ。Janine*）、leader_rematch.inc、match_call.inc（KogaFrlg1〜2）
+
+id = "janine"
+name = "アンズ"
+role = "セキチクジムの ジムリーダー（キョウの むすめ）"
+screen_time = "support"
+
+[official]
+source = "原作 金銀・HGSS の 設定（ポケモンWiki）。FR の 台詞は ない"
+first_person = "あたい"
+call_player = "あなた・{PLAYER}（名前で よぶ ことも ある）"
+endings = ["〜よ", "〜ね", "〜だよ", "〜の"]
+emotion = "父に あこがれる 元気な くのいち。まっすぐで 負けずぎらい"
+party = "クロバット・マタドガス・アリアドス・モルフォン"
+father = "父を「ちちうえ」と よぶ"
+
+[project]
+role = "キョウが だまって ジムを はなれた ため、あとを まかされた。父の しのびの わざを うけつぐ と きめて いる"
+party = "クロバット・マタドガス・アリアドス・モルフォン・メガペンドラー（再戦は 6匹）"
+after_scene = "キョウの 場面の あと「あたい ちちうえを かならず つれもどす！」"
+
+[conflicts]
+list = []
+# 原作の アンズは、キョウが してんのうに なって ジムを ついだ。ここでは 父が 理由を 言わずに 去った 形（ユーザーが きめた）
+
+[[relations]]
+target = "キョウ"
+kind = "父"
+call = "ちちうえ"
+
+[dont]
+list = [
+  "一人称を「わたし」に する（原作は「あたい」）",
+  "武家ことば（せっしゃ・おぬし は 父の 口調）",
+]
+
+[open]
+list = []
+
+[check]
+tags = ["アンズ"]
+player_call = "あなた"

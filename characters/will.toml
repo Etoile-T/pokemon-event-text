@@ -1,0 +1,42 @@
+# イツキ（ヤマブキジムの かりの ジムリーダー。エスパータイプ。ジョウトの してんのう）
+# FR には 出ない 人物なので [official] は 原作（金銀・HGSS）の 設定を まとめた もの（ポケモンWiki）。
+# [project] は この 改造の 立場（ナツメが はなれ、リーグに たのまれて いそいで かけつけた）。
+# 改造の 台本: SaffronCity_Gym_Frlg（Sabrina* の ラベル。中身は イツキ）、leader_rematch.inc、match_call.inc（SabrinaFrlg1〜2）
+
+id = "will"
+name = "イツキ"
+role = "ヤマブキジムの かりの ジムリーダー（ジョウトの してんのう）"
+screen_time = "support"
+
+[official]
+source = "原作 金銀・HGSS の 設定（ポケモンWiki）。FR の 台詞は ない"
+first_person = "ボク（カタカナ）"
+call_player = "きみ"
+endings = ["〜だよ", "〜だね", "〜かい", "〜して くれ"]
+emotion = "せかいじゅうを まわって エスパー ポケモンの とっくんを して きた。仮面を つけた 芝居がかった 品の よさ"
+party = "ネイティオ・ルージュラ・ナッシー・ヤドラン"
+
+[project]
+role = "ナツメが ジムを はなれた ため、リーグに たのまれて ジョウトから いそいで かけつけた かりの リーダー"
+party = "ネイティオ・ルージュラ・ナッシー・ヤドラン・メガエルレイド（原作の 4匹＋メガシンカの エース。再戦は 6匹）"
+
+[conflicts]
+list = []
+
+[[relations]]
+target = "ナツメ"
+kind = "前の リーダー。面識は 台本に ない"
+call = "ナツメさん"
+
+[dont]
+list = [
+  "一人称を ひらがなの「ぼく」や「わたし」に する",
+  "「かりの リーダー」を 看板に 書く（本人と ジムの 人の 台詞だけ）",
+]
+
+[open]
+list = []
+
+[check]
+tags = ["イツキ"]
+player_call = "きみ"
